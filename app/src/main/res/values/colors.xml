@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="materialblack" type="color">#000000</item>
+    <item name="material50lightblue" type="color">#B3E5FC</item>
+    <item name="material700red" type="color">#B71C1C</item>
+    <item name="materialwhite" type="color">#FFFFFF</item>
+    <item name="udacityorange" type="color">#F08C35</item>
+
+</resources>
