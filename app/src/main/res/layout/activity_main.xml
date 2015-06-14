@@ -36,7 +36,8 @@
             android:background="@color/udacityorange"
             android:text="@string/button_spotify"
             android:textAllCaps="true"
-            android:textSize="22sp"/>
+            android:textSize="22sp"
+            android:onClick="displayToast"/>
         <Button
             android:id="@+id/button_scores"
             android:layout_weight="1"
@@ -46,7 +47,8 @@
             android:background="@color/udacityorange"
             android:text="@string/button_scores"
             android:textAllCaps="true"
-            android:textSize="22sp"/>
+            android:textSize="22sp"
+            android:onClick="displayToast"/>
         <Button
             android:id="@+id/button_library"
             android:layout_weight="1"
@@ -56,7 +58,8 @@
             android:background="@color/udacityorange"
             android:text="@string/button_library"
             android:textAllCaps="true"
-            android:textSize="22sp"/>
+            android:textSize="22sp"
+            android:onClick="displayToast"/>
         <Button
             android:id="@+id/button_build"
             android:layout_weight="1"
@@ -66,7 +69,8 @@
             android:background="@color/udacityorange"
             android:text="@string/button_build"
             android:textAllCaps="true"
-            android:textSize="22sp"/>
+            android:textSize="22sp"
+            android:onClick="displayToast"/>
         <Button
             android:id="@+id/button_reader"
             android:layout_weight="1"
@@ -76,7 +80,8 @@
             android:background="@color/udacityorange"
             android:text="@string/button_reader"
             android:textAllCaps="true"
-            android:textSize="22sp"/>
+            android:textSize="22sp"
+            android:onClick="displayToast"/>
         <Button
             android:id="@+id/button_capstone"
             android:layout_weight="1"
@@ -88,7 +93,8 @@
             android:text="@string/button_capstone"
             android:textAllCaps="true"
             android:textColor="@color/materialwhite"
-            android:textSize="22sp"/>
+            android:textSize="22sp"
+            android:onClick="displayToast"/>
 
     </LinearLayout>
 

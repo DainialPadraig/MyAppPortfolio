@@ -16,98 +16,6 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // TODO - These methods are not very DRY, but they should be getting replaced soon!
-        /**
-         * Set up an event listener and display the toast for the Spotify app button.
-         */
-        Button spotifyButton = (Button) findViewById(R.id.button_spotify);
-
-        spotifyButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Context context = getApplicationContext();
-                CharSequence spotifyText = "This button will launch my spotify streamer app!";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast.makeText(context, spotifyText, duration).show();
-            }
-        });
-
-        /**
-         * Set up an event listener and display the toast for the Scores app button.
-         */
-        Button scoresButton = (Button) findViewById(R.id.button_scores);
-
-        scoresButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Context context = getApplicationContext();
-                CharSequence scoresText = "This button will launch my scores app!";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast.makeText(context, scoresText, duration).show();
-            }
-        });
-
-        /**
-         * Set up an event listener and display the toast for the Library app button.
-         */
-        Button libraryButton = (Button) findViewById(R.id.button_library);
-
-        libraryButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Context context = getApplicationContext();
-                CharSequence libraryText = "This button will launch my library app!";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast.makeText(context, libraryText, duration).show();
-            }
-        });
-
-        /**
-         * Set up an event listener and display the toast for the Build it Bigger app button.
-         */
-        Button buildButton = (Button) findViewById(R.id.button_build);
-
-        buildButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Context context = getApplicationContext();
-                CharSequence buildText = "This button will launch my build it bigger app!";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast.makeText(context, buildText, duration).show();
-            }
-        });
-
-        /**
-         * Set up an event listener and display the toast for the XYZ Reader app button.
-         */
-        Button readerButton = (Button) findViewById(R.id.button_reader);
-
-        readerButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Context context = getApplicationContext();
-                CharSequence readerText = "This button will launch my xyz reader app!";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast.makeText(context, readerText, duration).show();
-            }
-        });
-
-        /**
-         * Set up an event listener and display the toast for the Capstone app button.
-         */
-        Button capstoneButton = (Button) findViewById(R.id.button_capstone);
-
-        capstoneButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Context context = getApplicationContext();
-                CharSequence capstoneText = "This button will launch my capstone app!";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast.makeText(context, capstoneText, duration).show();
-            }
-        });
-
     }
 
     @Override
@@ -133,5 +41,22 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    /**
+     * Display the toast associated with the selected button.
+     */
+    public void displayToast(View view) {
+
+        Button button = (Button) view;
+
+        String buttonText = (String) button.getText();
+
+        Context context = getApplicationContext();
+        CharSequence text = getString(R.string.text_launch) + " " + buttonText + "!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+    }
 
 }
